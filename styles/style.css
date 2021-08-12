@@ -110,16 +110,21 @@ footer {
 }
 
 #cat:hover {
-	transform: scale(1.1);
+	transform: scale(1.1) rotate(5deg);
 	cursor: pointer;
 }
 
 #dog:hover {
-	transform: scale(1.1);
+	transform: scale(1.1) rotate(5deg);
 	cursor: pointer;
 }
 
 #horse:hover {
-	transform: scale(1.1);
+	transform: scale(1.1) rotate(5deg);
 	cursor: pointer;
+}
+
+img {
+	display: grid;
+	grid-template-rows: 1fr;
 }

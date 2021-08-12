@@ -15,17 +15,38 @@ const horseSound = document.getElementById('horseSound');
 const horseImage = document.getElementById('horse');
 const h1El = document.getElementById('header');
 
+function playSoundChangeText(sound, animalName) {
+	sound.play();
+	h1El.textContent = animalName;
+
+	setTimeout(() => {
+		h1El.textContent = 'Welcome to Alchemy Bootstrap!';
+	}, 3000);
+}
+
 dogImage.addEventListener('click', () => {
-	dogSound.play();
-	h1El.textContent = 'DOG';
+	playSoundChangeText(dogSound, 'DOG');
 });
 
 catImage.addEventListener('click', () => {
-	catSound.play();
-	h1El.textContent = 'CAT';
+	playSoundChangeText(catSound, 'CAT');
 });
 
 horseImage.addEventListener('click', () => {
-	horseSound.play();
-	h1El.textContent = 'HORSE';
+	playSoundChangeText(horseSound, 'HORSE');
+});
+
+//Key strokes:
+document.addEventListener('keydown', (event) => {
+	if (event.key === 'd') {
+		playSoundChangeText(dogSound, 'dog');
+	}
+
+	if (event.key === 'c') {
+		playSoundChangeText(catSound, 'cat');
+	}
+
+	if (event.key === 'h') {
+		playSoundChangeText(horseSound, 'horse');
+	}
 });
