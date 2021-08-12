@@ -111,12 +111,15 @@ footer {
 
 #cat:hover {
 	transform: scale(1.1);
+	cursor: pointer;
 }
 
 #dog:hover {
 	transform: scale(1.1);
+	cursor: pointer;
 }
 
 #horse:hover {
 	transform: scale(1.1);
+	cursor: pointer;
 }
